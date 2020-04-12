@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "jest": "^25.3.0",
+    "moxios": "^0.4.0",
     "nodemon": "^2.0.3",
     "supertest": "^4.0.2"
   }

@@ -14,16 +14,15 @@ describe("GET /repos", () => {
     moxios.stubRequest(/api.github.com\/search\/repositories\?q=\//, {
       status: 200,
       response: {
-        suggestionArray: [],
-        resultArray: [],
+        items: {},
       },
     });
     const response = await request(app).get("/repos");
 
     expect(response.status).toBe(200);
     expect(response.body).toEqual({
-      suggestionArray: [],
-      resultArray: [],
+      autocompleteSearchInput: [],
+      searchResult: [],
     });
     expect(moxios.requests.mostRecent().url).toBe(
       "https://api.github.com/search/repositories?q=/react"

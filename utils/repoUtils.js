@@ -5,7 +5,7 @@ const extractSearchData = (info) => {
       full_name: info[i].full_name,
       description: info[i].description,
       stars: info[i].stargazers_count,
-      url: info[i].url,
+      url: info[i].html_url,
     });
   }
   return searchResult;

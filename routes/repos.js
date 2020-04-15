@@ -9,8 +9,9 @@ const githubSearchAPIRoute = (params = "") => {
 };
 
 reposRouter.get("/", (req, res, next) => {
+  const { userInput } = req.query;
   axios
-    .get(githubSearchAPIRoute("react"))
+    .get(githubSearchAPIRoute(userInput))
     .then((response) => {
       const info = response.data.items;
       const searchResult = extractSearchData(info);

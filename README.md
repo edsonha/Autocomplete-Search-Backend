@@ -7,16 +7,18 @@ The [web application](https://autocomplete-search-frontend.herokuapp.com/) is ho
 
 ```
   1. npm install
-  2. create new ".env" file
-  5. put this in .env
+  2. Create new .env file
+  5. Put these two lines in .env file
      GITHUB_PERSONAL_TOKEN=token ${YOUR_PERSONAL_GITHUB_TOKEN}
+     PORT=3001
   4. npm start
+  5. Run http://localhost:3001/ on your website and get welcome message "Welcome to Express REST API"
 ```
 
 ## How to get your PERSONAL GITHUB TOKEN
 
 ```
-  1. Go to your Github. On your profile picture on top right, click and select "Settings"
+  1. Go to your Github. On your profile picture at top right, click and select "Settings"
   2. Select "Developer settings"
   3. Select "Personal access tokens"
   4. Select "Generate new token"

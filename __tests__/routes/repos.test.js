@@ -25,7 +25,7 @@ describe("GET /repos", () => {
       searchResult: [],
     });
     expect(moxios.requests.mostRecent().url).toBe(
-      "https://api.github.com/search/repositories?q=/react"
+      "https://api.github.com/search/repositories?q=/"
     );
   });
 
@@ -40,7 +40,7 @@ describe("GET /repos", () => {
     expect(response.status).toBe(500);
     expect(response.body.message).toBe("Request failed with status code 500");
     expect(moxios.requests.mostRecent().url).toBe(
-      "https://api.github.com/search/repositories?q=/react"
+      "https://api.github.com/search/repositories?q=/"
     );
   });
 });

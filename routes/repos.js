@@ -10,8 +10,13 @@ const githubSearchAPIRoute = (params = "") => {
 
 reposRouter.get("/", (req, res, next) => {
   const { userInput } = req.query;
-  axios
-    .get(githubSearchAPIRoute(userInput))
+  axios({
+    method: "get",
+    url: `${githubSearchAPIRoute(userInput)}`,
+    headers: {
+      authorization: process.env.GITHUB_PERSONAL_TOKEN,
+    },
+  })
     .then((response) => {
       const info = response.data.items;
       const searchResult = extractSearchData(info);
